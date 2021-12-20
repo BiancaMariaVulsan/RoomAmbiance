@@ -1,0 +1,35 @@
+﻿<Window x:Class="RoomProject.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="600">
+    <StackPanel>
+            <Label Content="Temperature"
+                   Style="{StaticResource BigLabelStyle}"/>
+        <Label Content="{Binding Temperature}"
+                   Style="{StaticResource ValueLabelStyle}"/>
+        <Label Content="Humidity"
+                   Style="{StaticResource BigLabelStyle}"/>
+        <Label Content="{Binding Humidity}"
+                   Style="{StaticResource ValueLabelStyle}"/>
+        <Label Content="Luminosity"
+                   Style="{StaticResource BigLabelStyle}"/>
+        <Label Content="{Binding Luminosity}"
+                   Style="{StaticResource ValueLabelStyle}"/>
+        <Label Content="Flame"
+                   Style="{StaticResource BigLabelStyle}"/>
+        <Label Content="{Binding Flame}"
+                   Style="{StaticResource ValueLabelStyle}"/>
+        <Button Content="Start measuring"
+                    Margin="100, 50, 100, 30"
+                    FontSize="40"
+                    Click="OnStartClicked"/>
+        <Label Content="{Binding StatusMessage}"
+                   Style="{StaticResource ValueLabelStyle}"/>
+        <Label Content="Status"
+                   Style="{StaticResource BigLabelStyle}"/>
+    </StackPanel>
+</Window>
